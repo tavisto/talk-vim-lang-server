@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>Using Language Servers with vim</title>
+  <meta name="author" content="Tavis Aitken">
+  <title>Language Servers in vim</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -32,30 +33,64 @@
   <div class="reveal">
     <div class="slides">
 
-
-<section class="slide level2">
-
-<p>title: Title of Talk pagetitle: Title of Talk author: Tavis Aitken date: Oct 9 2019</p>
+<section id="title-slide">
+  <h1 class="title">Language servers in Vim</h1>
+  <p class="author">Tavis Aitken</p>
 </section>
-<section><section id="language-servers-in-vim" class="title-slide slide level1"><h1>Language servers in VIM</h1></section><section id="test" class="slide level2">
-<h2>Test</h2>
+
+<section><section id="who-am-i" class="title-slide slide level1"><h1>Who am I?</h1></section><section id="about-me" class="slide level2">
+<h2>About me</h2>
+<p>::: incremental * Coding for a while now * Used IDE such as Zend Studio for PHP * Read the Pragmatic Programmer, took to heart the idea of using one tool really well. * Got hooked on Vim, decided this was my tool * Put all my configs in source control * Realized mercurial wasn’t going anywhere and switched to git</p>
+</section></section>
+<section><section id="what-is-vim" class="title-slide slide level1"><h1>What is Vim?</h1></section><section id="a-brief-history" class="slide level2">
+<h2>A brief history</h2>
+<div>
 <ul>
-<li>regular list item</li>
-<li>another one</li>
+<li class="fragment">VI by <a href="https://en.wikipedia.org/wiki/Vi">Bill Joy</a> in 1976 for BSD</li>
+<li class="fragment">Vim by <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">Bram Moolenaar</a> in 1991 for the Amiga</li>
+<li class="fragment">NeoVim is a fork by <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)#Neovim">Justin M. Keyes</a> in 2014</li>
+</ul>
+</div>
+</section><section id="neat-how-do-i-quit" class="slide level2">
+<h2>Neat, how do I quit?</h2>
+<p>You don’t, this is your life now better learn to use it</p>
+</section></section>
+<section><section id="what-is-a-language-server" class="title-slide slide level1"><h1>What is a language server?</h1></section><section class="slide level2">
+
+<p>It’s just this thing you know?</p>
+</section><section id="what-languages-are-available" class="slide level2">
+<h2>What languages are available?</h2>
+<p>All the ones I have needed thus far.</p>
+<ul>
+<li>python</li>
+<li>ruby</li>
+<li>go</li>
+<li>terraform</li>
+<li>puppet</li>
+<li>docker</li>
+<li>yaml</li>
+<li>json</li>
+</ul>
+</section></section>
+<section><section id="so-how-do-you-set-these-up-with-vim" class="title-slide slide level1"><h1>So how do you set these up with Vim?</h1></section><section id="coc.nvim" class="slide level2">
+<h2><a href="https://github.com/neoclide/coc.nvim">coc.nvim</a></h2>
+<blockquote>
+<p>It’s a completion framework and language server client which supports extension features of VSCode.</p>
+</blockquote>
+</section><section id="wait-vscode-i-thought-you-were-a-terminal-only-type-of-operator" class="slide level2">
+<h2>Wait, VSCode? I thought you were a terminal only type of operator!?</h2>
+<ul>
+<li>VSCode Is one of the few editors that have come out I have considered switching to.</li>
 </ul>
 <div>
 <ul>
-<li class="fragment">Eat spaghetti</li>
-<li class="fragment">Drink wine</li>
+<li class="fragment">Until I figured out how to get all this language server stuff working that is.</li>
 </ul>
 </div>
-<aside class="notes">
-<p>This is my note.</p>
-<ul>
-<li>It can contain Markdown</li>
-<li>like this list</li>
-</ul>
-</aside>
+</section></section>
+<section><section id="demo-time" class="title-slide slide level1"><h1>Demo Time!</h1></section><section class="slide level2">
+
+<p>Lets hope I didn’t break it trying to make the demo cooler.</p>
 </section></section>
     </div>
   </div>
