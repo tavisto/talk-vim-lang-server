@@ -11,12 +11,14 @@
   <link rel="stylesheet" href="reveal.js/css/reset.css">
   <link rel="stylesheet" href="reveal.js/css/reveal.css">
   <style>
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+  <link rel="stylesheet" href="reveal.js/css/theme/moon.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
@@ -38,29 +40,120 @@
   <p class="author">Tavis Aitken</p>
 </section>
 
-<section><section id="who-am-i" class="title-slide slide level1"><h1>Who am I?</h1></section><section id="about-me" class="slide level2">
-<h2>About me</h2>
-<p>::: incremental * Coding for a while now * Used IDE such as Zend Studio for PHP * Read the Pragmatic Programmer, took to heart the idea of using one tool really well. * Got hooked on Vim, decided this was my tool * Put all my configs in source control * Realized mercurial wasn’t going anywhere and switched to git</p>
+<section>
+<section id="who-am-i" class="title-slide slide level1">
+<h1>Who am I?</h1>
+
+</section>
+<section id="tavis-aitken" class="slide level2">
+<h2>Tavis Aitken</h2>
+<figure>
+<img data-src="img/tavisto-headshot.jpeg" alt="" /><figcaption>Tavisto</figcaption>
+</figure>
+<div>
+<ul>
+<li class="fragment">Coding for a while now, which is apparently 20 years now.</li>
+<li class="fragment">Mohawk enthusiast</li>
+<li class="fragment">Organizer of Denver DevOps meetup</li>
+<li class="fragment">Organizer of DevOpsDays Rockies</li>
+<li class="fragment">Principal SRE at Splunk</li>
+</ul>
+</div>
+</section>
+<section id="my-progression-of-coding-tools" class="slide level2">
+<h2>My progression of coding tools</h2>
+<div>
+<ul>
+<li class="fragment">Started off using Borland C complier</li>
+<li class="fragment">Used <a href="https://en.wikipedia.org/wiki/NEdit">NEDit</a> in school and first few jobs</li>
+<li class="fragment">The first real IDE was Zend Studio for PHP, including the switch to <a href="https://en.wikipedia.org/wiki/Eclipse_(software)">Eclipse</a></li>
+<li class="fragment">Read the book <a href="https://pragprog.com/book/tpp20/the-pragmatic-programmer-20th-anniversary-edition">“The Pragmatic Programmer”</a>, and took to heart the idea of using one tool really well.</li>
+<li class="fragment">I decided Vim was my tool, and I needed to get really good at it.</li>
+<li class="fragment">Put all my configs in source control</li>
+<li class="fragment">Switched it up to NeoVim, which made me start my configs all over from scratch.</li>
+</ul>
+</div>
 </section></section>
-<section><section id="what-is-vim" class="title-slide slide level1"><h1>What is Vim?</h1></section><section id="a-brief-history" class="slide level2">
+<section>
+<section id="what-is-vim" class="title-slide slide level1">
+<h1>What is Vim?</h1>
+
+</section>
+<section id="a-simple-yet-extremely-powerful-editor" class="slide level2">
+<h2>A simple, yet extremely powerful editor</h2>
+<p>VI variants have been around for a long time, and have been used by developers nearly as long as we have been writing code.</p>
+</section>
+<section id="a-brief-history" class="slide level2">
 <h2>A brief history</h2>
 <div>
 <ul>
-<li class="fragment">VI by <a href="https://en.wikipedia.org/wiki/Vi">Bill Joy</a> in 1976 for BSD</li>
-<li class="fragment">Vim by <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">Bram Moolenaar</a> in 1991 for the Amiga</li>
-<li class="fragment">NeoVim is a fork by <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)#Neovim">Justin M. Keyes</a> in 2014</li>
+<li class="fragment">ed by <a href="https://en.wikipedia.org/wiki/Ed_(text_editor)">Ken Thompson</a> in 1973 for the original Bell Labs Unix, which is still part of the POSIX standard</li>
+<li class="fragment">em by <a href="https://en.wikipedia.org/wiki/George_Coulouris_(computer_scientist)">George Coulouris</a> Editor for mortals, because ed was hard to use.</li>
+<li class="fragment">ex by <a href="https://en.wikipedia.org/wiki/Ex_(text_editor)">Bill Joy</a> started from the code for em and in 1976 created an extended version of ed that got included in BSD</li>
+<li class="fragment">vi by <a href="https://en.wikipedia.org/wiki/Vi">Bill Joy</a> in 1976 renamed the project and made the visual mode of ed the main attraction</li>
 </ul>
 </div>
-</section><section id="neat-how-do-i-quit" class="slide level2">
-<h2>Neat, how do I quit?</h2>
-<p>You don’t, this is your life now better learn to use it</p>
+</section>
+<section id="time-of-the-clones" class="slide level2">
+<h2>Time of the clones</h2>
+<p>Sometimes the originals just don’t cut it, or aren’t available for the platform you are using.</p>
+<div>
+<ul>
+<li class="fragment">Stevie by <a href="https://en.wikipedia.org/wiki/Stevie_(text_editor)">Tim Thompson</a> was written for the Atari ST in 1987, and the code was posted as free software</li>
+<li class="fragment">Elvis by <a href="https://en.wikipedia.org/wiki/Elvis_(text_editor)">Steve Kirkendal</a> 1990, was the first to include color syntax highlighting</li>
+<li class="fragment">Vim by <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">Bram Moolenaar</a> in 1991 for the Amiga, based on <code>Stevie</code></li>
+<li class="fragment">NeoVim by <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)#Neovim">Justin M. Keyes</a> is a fork of <code>Vim</code> in 2014 that seeks to make it easier to maintain and separate the ui from the backend</li>
+</ul>
+</div>
+</section>
+<section id="neat-i-am-going-to-use-it-wait-how-do-i-quit" class="slide level2">
+<h2>Neat! I am going to use it! Wait, how do I quit?</h2>
+<div>
+<ul>
+<li class="fragment">You don’t, this is your life now better learn to use it</li>
+</ul>
+</div>
 </section></section>
-<section><section id="what-is-a-language-server" class="title-slide slide level1"><h1>What is a language server?</h1></section><section class="slide level2">
+<section>
+<section id="what-is-a-language-server" class="title-slide slide level1">
+<h1>What is a language server?</h1>
 
-<p>It’s just this thing you know?</p>
-</section><section id="what-languages-are-available" class="slide level2">
+</section>
+<section id="what-is-lsp" class="slide level2">
+<h2>What is LSP?</h2>
+<p>The Language Server protocol is used between a tool (the client) and a language smartness provider (the server) to integrate features like auto complete, go to definition, find all references and alike into the tool - <a href="https://microsoft.github.io/language-server-protocol/specifications/specification-3-14">Language Server Protocol specification</a></p>
+</section>
+<section id="who-created-it-and-why" class="slide level2">
+<h2>Who created it and why?</h2>
+<p>The LSP was created by Microsoft to define a common language for programming language analyzers to speak. Today, several companies have come together to support its growth, including Codenvy, Red Hat, and Sourcegraph, and the protocol is becoming supported by a rapidly growing list of editor and language communities</p>
+<p>It is featured quite heavily in the VSCode editor to do all the auto completion as well as syntax checking.</p>
+</section>
+<section id="wait-vscode-i-thought-you-were-a-terminal-only-type-of-operator" class="slide level2">
+<h2>Wait, VSCode? I thought you were a terminal only type of operator!?</h2>
+<ul>
+<li>VSCode Is one of the few editors that have come out I have considered switching to.</li>
+</ul>
+<div>
+<ul>
+<li class="fragment">Until I figured out how to get all this language server stuff working that is.</li>
+</ul>
+</div>
+</section>
+<section id="what-other-editors-can-use-them" class="slide level2">
+<h2>What other editors can use them?</h2>
+<p>Most modern editors have users that have embraced the idea and have made plugins that can utilize LSP backends.</p>
+<ul>
+<li>Vim / NeoVim</li>
+<li>Emacs</li>
+<li>VSCode</li>
+<li>JetBrains ( all the variants)</li>
+<li>Sublime</li>
+<li>Atom</li>
+</ul>
+</section>
+<section id="what-languages-are-available" class="slide level2">
 <h2>What languages are available?</h2>
-<p>All the ones I have needed thus far.</p>
+<p>Thus far the ones I have used are:</p>
 <ul>
 <li>python</li>
 <li>ruby</li>
@@ -71,26 +164,70 @@
 <li>yaml</li>
 <li>json</li>
 </ul>
+<p>A full list can be found at <a href="https://langserver.org#implementations-server">Langserver.org</a></p>
 </section></section>
-<section><section id="so-how-do-you-set-these-up-with-vim" class="title-slide slide level1"><h1>So how do you set these up with Vim?</h1></section><section id="coc.nvim" class="slide level2">
-<h2><a href="https://github.com/neoclide/coc.nvim">coc.nvim</a></h2>
-<blockquote>
-<p>It’s a completion framework and language server client which supports extension features of VSCode.</p>
-</blockquote>
-</section><section id="wait-vscode-i-thought-you-were-a-terminal-only-type-of-operator" class="slide level2">
-<h2>Wait, VSCode? I thought you were a terminal only type of operator!?</h2>
+<section>
+<section id="so-how-do-you-set-these-up-with-vim" class="title-slide slide level1">
+<h1>So how do you set these up with Vim?</h1>
+
+</section>
+<section id="there-are-two-parts-the-client-and-the-servers" class="slide level2">
+<h2>There are two parts, the client and the servers</h2>
+<p>In order to utilize the LSP we first need a client that can understand what is needed and start a backened server and talk to it.</p>
+<p>There are a few options for Vim, some only work with NeoVim due to the way the ability to run processes in an asynchronous way</p>
 <ul>
-<li>VSCode Is one of the few editors that have come out I have considered switching to.</li>
+<li><a href="https://github.com/prabirshrestha/vim-lsp">vim-lsp</a></li>
+<li><a href="https://github.com/autozimu/LanguageClient-neovim">LanguageClient</a></li>
+<li><a href="https://github.com/neoclide/coc.nvim">coc.nvim</a></li>
 </ul>
-<div>
+</section>
+<section id="so-which-one-do-you-use" class="slide level2">
+<h2>So which one do you use?</h2>
+<p>My choice is coc.nvim.</p>
+</section>
+<section id="pros" class="slide level2">
+<h2>Pros:</h2>
 <ul>
-<li class="fragment">Until I figured out how to get all this language server stuff working that is.</li>
+<li>I found it to be the most complete and easiest to install and use.</li>
+<li>It has a snippit mode that is really nice and super fast</li>
+<li>The install of languange servers can be handled by the plugin</li>
+<li>It can keep all the servers it uses up to date on startup</li>
+<li>It’s easy to customize to make it use a local complied LSP server if needed such as the terraform one</li>
 </ul>
-</div>
+</section>
+<section id="cons" class="slide level2">
+<h2>Cons:</h2>
+<ul>
+<li>It uses a lot of nodejs to do the installs and run language servers</li>
+<li>The initial setup can be confusing and a little tricky until you get all the requirements setup.</li>
+<li>I am still getting used to the key mappings coming from other plugins like utilisnip</li>
+<li>The nature of Async can sometimes lag behind what you can type</li>
+</ul>
 </section></section>
-<section><section id="demo-time" class="title-slide slide level1"><h1>Demo Time!</h1></section><section class="slide level2">
+<section>
+<section id="demo-time" class="title-slide slide level1">
+<h1>Demo Time!</h1>
+
+</section>
+<section class="slide level2">
 
 <p>Lets hope I didn’t break it trying to make the demo cooler.</p>
+</section></section>
+<section>
+<section id="resources" class="title-slide slide level1">
+<h1>Resources</h1>
+
+</section>
+<section class="slide level2">
+
+<ul>
+<li><a href="https://twobithistory.org/2018/08/05/where-vim-came-from.html">Where Vim Came From</a></li>
+<li><a href="https://langserver.org">langserver.org</a></li>
+<li><a href="https://github.com/neoclide/coc.nvim">neoclide/coc.nvim</a></li>
+<li><a href="https://github.com/neovim/">NeoVim</a></li>
+<li><a href="https://github.com/tavisto/nvim-configs">tavisto/nvim-configs</a></li>
+<li><a href="https://pragprog.com/book/tpp20/the-pragmatic-programmer-20th-anniversary-edition">The Pragmatic Programmer</a></li>
+</ul>
 </section></section>
     </div>
   </div>
